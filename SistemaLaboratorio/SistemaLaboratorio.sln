@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35431.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaLaboratorio", "SistemaLaboratorio\SistemaLaboratorio.csproj", "{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{D40DB9BF-87A7-45D6-B94B-66BD26C6A076}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{463E8DE1-0EF2-41D6-BE59-D65128AF75F6}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SistemaLaboratorio.Core", "SistemaLaboratorio.Core\SistemaLaboratorio.Core.shproj", "{9EE6666D-E732-4879-90EE-2D812D894439}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Core.MVVM", "Core.MVVM\Core.MVVM.shproj", "{7F79A620-9364-403C-8DC1-F2B70EA96152}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Debug|ARM.ActiveCfg = Debug|ARM
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Debug|ARM.Build.0 = Debug|ARM
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Debug|ARM.Deploy.0 = Debug|ARM
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Debug|ARM64.Build.0 = Debug|ARM64
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Debug|x64.ActiveCfg = Debug|x64
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Debug|x64.Build.0 = Debug|x64
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Debug|x64.Deploy.0 = Debug|x64
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Debug|x86.ActiveCfg = Debug|x86
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Debug|x86.Build.0 = Debug|x86
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Debug|x86.Deploy.0 = Debug|x86
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Release|ARM.ActiveCfg = Release|ARM
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Release|ARM.Build.0 = Release|ARM
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Release|ARM.Deploy.0 = Release|ARM
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Release|ARM64.ActiveCfg = Release|ARM64
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Release|ARM64.Build.0 = Release|ARM64
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Release|ARM64.Deploy.0 = Release|ARM64
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Release|x64.ActiveCfg = Release|x64
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Release|x64.Build.0 = Release|x64
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Release|x64.Deploy.0 = Release|x64
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Release|x86.ActiveCfg = Release|x86
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Release|x86.Build.0 = Release|x86
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF75FF41-B9D9-4AEF-BA59-BE2FB8EB9CBD} = {D40DB9BF-87A7-45D6-B94B-66BD26C6A076}
+		{9EE6666D-E732-4879-90EE-2D812D894439} = {463E8DE1-0EF2-41D6-BE59-D65128AF75F6}
+		{7F79A620-9364-403C-8DC1-F2B70EA96152} = {463E8DE1-0EF2-41D6-BE59-D65128AF75F6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5674BD9F-0E74-4CC8-8D6E-7F663B0C1CE6}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Core.MVVM\Core.MVVM.projitems*{7f79a620-9364-403c-8dc1-f2b70ea96152}*SharedItemsImports = 13
+		SistemaLaboratorio.Core\SistemaLaboratorio.Core.projitems*{9ee6666d-e732-4879-90ee-2d812d894439}*SharedItemsImports = 13
+		Core.MVVM\Core.MVVM.projitems*{ef75ff41-b9d9-4aef-ba59-be2fb8eb9cbd}*SharedItemsImports = 4
+		SistemaLaboratorio.Core\SistemaLaboratorio.Core.projitems*{ef75ff41-b9d9-4aef-ba59-be2fb8eb9cbd}*SharedItemsImports = 4
+	EndGlobalSection
+EndGlobal
