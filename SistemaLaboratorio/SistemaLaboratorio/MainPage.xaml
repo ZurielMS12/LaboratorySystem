@@ -2,13 +2,51 @@
     x:Class="SistemaLaboratorio.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:SistemaLaboratorio"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <NavigationView x:Name="NavView"
+                        IsSettingsVisible="False"
+                        PaneDisplayMode="Left"
+                        IsBackButtonVisible="Collapsed"
+                        OpenPaneLength="200">
 
+            <NavigationView.MenuItems>
+                <!-- Elemento de Inicio -->
+                <NavigationViewItem Icon="Home" Content="Inicio" Tag="home"/>
+
+                <!-- Elemento de Revisión de Resultados -->
+                <NavigationViewItem Icon="Document" Content="Revisión de Resultados" Tag="results"/>
+            </NavigationView.MenuItems>
+
+            <Frame x:Name="ContentFrame">
+                <Grid>
+                    <!-- Área principal con espacio para animación -->
+                    <Grid x:Name="MainContent" 
+                          Padding="20"
+                          HorizontalAlignment="Stretch" 
+                          VerticalAlignment="Stretch">
+
+                        <!-- Contenedor para la animación -->
+                        <Border Background="#f0f0f0" 
+                                CornerRadius="8"
+                                Padding="20">
+
+                            <!-- Aquí irá el contenido de la animación -->
+                            <Grid x:Name="AnimationContainer">
+                                <TextBlock Text="Área de Animación"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </Frame>
+        </NavigationView>
     </Grid>
 </Page>
