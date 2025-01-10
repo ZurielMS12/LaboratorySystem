@@ -1,0 +1,51 @@
+<Page
+    x:Class="SistemaLaboratorio.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Canvas x:Name="AnimationCanvas" Width="400" Height="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- Tubo de ensayo -->
+            <Rectangle x:Name="TestTube" 
+                     Canvas.Left="175" 
+                     Canvas.Top="100"
+                     Width="50" 
+                     Height="200" 
+                     Fill="Transparent" 
+                     Stroke="Gray" 
+                     StrokeThickness="2"/>
+
+            <Path x:Name="TestTubeBase"
+                  Canvas.Left="165"
+                  Canvas.Top="300"
+                  Data="M 0,0 C 0,0 35,0 70,0 C 70,20 0,20 0,0"
+                  Fill="Gray"/>
+
+            <Rectangle x:Name="Liquid"
+                     Canvas.Left="177"
+                     Canvas.Top="250"
+                     Width="46"
+                     Height="48"
+                     Fill="#FFE53935">
+                <Rectangle.RenderTransform>
+                    <TranslateTransform x:Name="LiquidTransform" Y="0"/>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
+            <Ellipse x:Name="Bubble1" Width="8" Height="8" Fill="#22FFFFFF" Canvas.Left="190" Canvas.Top="260">
+                <Ellipse.RenderTransform>
+                    <TranslateTransform x:Name="Bubble1Transform" Y="0"/>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+
+            <Ellipse x:Name="Bubble2" Width="6" Height="6" Fill="#22FFFFFF" Canvas.Left="200" Canvas.Top="270">
+                <Ellipse.RenderTransform>
+                    <TranslateTransform x:Name="Bubble2Transform" Y="0"/>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+        </Canvas>
+    </Grid>
+</Page>

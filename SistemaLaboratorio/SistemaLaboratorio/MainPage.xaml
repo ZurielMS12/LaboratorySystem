@@ -16,35 +16,55 @@
                         OpenPaneLength="200">
 
             <NavigationView.MenuItems>
-                <!-- Elemento de Inicio -->
                 <NavigationViewItem Icon="Home" Content="Inicio" Tag="home"/>
-
-                <!-- Elemento de Revisión de Resultados -->
                 <NavigationViewItem Icon="Document" Content="Revisión de Resultados" Tag="results"/>
             </NavigationView.MenuItems>
 
             <Frame x:Name="ContentFrame">
                 <Grid>
-                    <!-- Área principal con espacio para animación -->
-                    <Grid x:Name="MainContent" 
-                          Padding="20"
-                          HorizontalAlignment="Stretch" 
-                          VerticalAlignment="Stretch">
+                    <Canvas x:Name="AnimationCanvas" Width="400" Height="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <!-- Tubo de ensayo -->
+                        <Rectangle x:Name="TestTube" 
+                                 Canvas.Left="175" 
+                                 Canvas.Top="100"
+                                 Width="50" 
+                                 Height="200" 
+                                 Fill="Transparent" 
+                                 Stroke="Gray" 
+                                 StrokeThickness="2"/>
 
-                        <!-- Contenedor para la animación -->
-                        <Border Background="#f0f0f0" 
-                                CornerRadius="8"
-                                Padding="20">
+                        <!-- Base del tubo -->
+                        <Path x:Name="TestTubeBase"
+                              Canvas.Left="165"
+                              Canvas.Top="300"
+                              Data="M 0,0 C 0,0 35,0 70,0 C 70,20 0,20 0,0"
+                              Fill="Gray"/>
 
-                            <!-- Aquí irá el contenido de la animación -->
-                            <Grid x:Name="AnimationContainer">
-                                <TextBlock Text="Área de Animación"
-                                           HorizontalAlignment="Center"
-                                           VerticalAlignment="Center"
-                                           Style="{ThemeResource SubtitleTextBlockStyle}"/>
-                            </Grid>
-                        </Border>
-                    </Grid>
+                        <!-- Líquido animado -->
+                        <Rectangle x:Name="Liquid"
+                                 Canvas.Left="177"
+                                 Canvas.Top="250"
+                                 Width="46"
+                                 Height="48"
+                                 Fill="#FFE53935">
+                            <Rectangle.RenderTransform>
+                                <TranslateTransform x:Name="LiquidTransform" Y="0"/>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
+
+                        <!-- Burbujas -->
+                        <Ellipse x:Name="Bubble1" Width="8" Height="8" Fill="#22FFFFFF" Canvas.Left="190" Canvas.Top="260">
+                            <Ellipse.RenderTransform>
+                                <TranslateTransform x:Name="Bubble1Transform" Y="0"/>
+                            </Ellipse.RenderTransform>
+                        </Ellipse>
+
+                        <Ellipse x:Name="Bubble2" Width="6" Height="6" Fill="#22FFFFFF" Canvas.Left="200" Canvas.Top="270">
+                            <Ellipse.RenderTransform>
+                                <TranslateTransform x:Name="Bubble2Transform" Y="0"/>
+                            </Ellipse.RenderTransform>
+                        </Ellipse>
+                    </Canvas>
                 </Grid>
             </Frame>
         </NavigationView>

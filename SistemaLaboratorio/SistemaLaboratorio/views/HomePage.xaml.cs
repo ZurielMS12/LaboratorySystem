@@ -1,40 +1,20 @@
-﻿using System;
+using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 
 namespace SistemaLaboratorio
 {
-    public sealed partial class MainPage : Page
+    public sealed partial class HomePage : Page
     {
-        public MainPage()
+        public HomePage()
         {
             this.InitializeComponent();
-            NavView.ItemInvoked += NavView_ItemInvoked;
-            StartAnimation(); // Iniciamos la animación
-        }
-
-        private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
-        {
-            if (args.IsSettingsInvoked)
-                return;
-
-            var tag = args.InvokedItemContainer.Tag.ToString();
-
-            switch (tag)
-            {
-                case "home":
-                    ContentFrame.Navigate(typeof(HomePage));
-                    break;
-                case "results":
-                    ContentFrame.Navigate(typeof(ResultsPage));
-                    break;
-            }
+            StartAnimation();
         }
 
         private void StartAnimation()
         {
-            // Animación del líquido
             var liquidAnimation = new DoubleAnimation
             {
                 From = 0,
@@ -44,7 +24,6 @@ namespace SistemaLaboratorio
                 RepeatBehavior = RepeatBehavior.Forever
             };
 
-            // Animación de las burbujas
             var bubble1Animation = new DoubleAnimation
             {
                 From = 0,
