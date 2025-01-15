@@ -122,7 +122,11 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OS\NavigationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\MenuOption.xaml.cs">
+      <DependentUpon>MenuOption.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -154,6 +158,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="UC\MenuOption.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,7 +182,6 @@
   <ItemGroup>
     <Folder Include="Helpers\" />
     <Folder Include="Pops\" />
-    <Folder Include="UC\" />
   </ItemGroup>
   <Import Project="..\Core.MVVM\Core.MVVM.projitems" Label="Shared" />
   <Import Project="..\SistemaLaboratorio.Core\SistemaLaboratorio.Core.projitems" Label="Shared" />
