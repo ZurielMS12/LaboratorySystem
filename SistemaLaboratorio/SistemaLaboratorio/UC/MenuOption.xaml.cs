@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
@@ -41,20 +42,21 @@ namespace SistemaLaboratorio.UC
                 me.label.Text = me.Title ?? string.Empty;
             }));
 
-
-        public SymbolIcon IconOption
+        public string ImageSource
         {
-            get => (SymbolIcon)GetValue(IconOptionProperty);
-            set => SetValue(IconOptionProperty, value); 
+            get => (string)GetValue(ImageSourceProperty);
+            set => SetValue(ImageSourceProperty, value);
         }
 
-        public static readonly DependencyProperty IconOptionProperty = DependencyProperty.Register(nameof(IconOption), typeof(SymbolIcon), typeof(MenuOption),
-            new PropertyMetadata(default(SymbolIcon), (bindable, e) =>
+        public static readonly DependencyProperty ImageSourceProperty = DependencyProperty.Register(nameof(ImageSource), typeof(string), typeof(MenuOption),
+            new PropertyMetadata(default(string), (bindable, e) =>
             {
                 var me = (MenuOption)bindable;
-                me.IconOption = (SymbolIcon)e.NewValue;
-                me.icon = me.IconOption;
+                me.ImageSource = e.NewValue.ToString();
+                if(!string.IsNullOrEmpty(me.ImageSource))
+                    me.icon.Source = new BitmapImage(new Uri(me.ImageSource));
             }));
+
         #endregion
     }
 }

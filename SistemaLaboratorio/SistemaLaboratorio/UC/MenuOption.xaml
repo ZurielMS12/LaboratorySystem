@@ -7,13 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="mainGrid" Padding="12,4">
+    <Grid x:Name="mainGrid" Padding="12,4" Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="50" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Border x:Name="mainBorder" Grid.ColumnSpan="2" Background="Black" CornerRadius="15" Padding="14" />
-        <SymbolIcon x:Name="icon" Symbol="Home" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <Image x:Name="icon" Source="ms-appx:///Assets/home.png" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" />
         <TextBlock x:Name="label" Text="Opcion 1" Grid.Column="1" FontFamily="Segoe UI" FontWeight="Normal" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
     </Grid>
 </UserControl>

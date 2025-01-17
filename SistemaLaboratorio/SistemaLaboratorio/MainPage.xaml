@@ -8,65 +8,45 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <NavigationView x:Name="NavView"
-                        IsSettingsVisible="False"
-                        PaneDisplayMode="Left"
-                        IsBackButtonVisible="Collapsed"
-                        OpenPaneLength="200">
+    <Grid x:Name="containerMain" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65" />
+            <RowDefinition Height="*" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
 
-            <NavigationView.MenuItems>
-                <NavigationViewItem Icon="Home" Content="Inicio" Tag="home"/>
-                <NavigationViewItem Icon="Document" Content="Revisión de Resultados" Tag="results"/>
-            </NavigationView.MenuItems>
+        <Border Background="Aqua" CornerRadius="0,10,10,0">
+            <TextBlock Text="AQUI VA A ESTAR UN LOGO" Foreground="Black" />
+        </Border>
+        <Border Background="Beige" Grid.Column="1">
+            <TextBlock Text="AQUI OTROS ELEMENTOS VISUALES" Foreground="Black" />
+        </Border>
 
-            <Frame x:Name="ContentFrame">
+        <SplitView x:Name="split" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="LightBlue" IsPaneOpen="True" PanePlacement="Left" OpenPaneLength="250" CompactPaneLength="48" DisplayMode="CompactInline" >
+            <SplitView.Pane>
+                <Grid x:Name="menuGrid" />
+            </SplitView.Pane>
+            <SplitView.Content>
                 <Grid>
-                    <Canvas x:Name="AnimationCanvas" Width="400" Height="400" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <!-- Tubo de ensayo -->
-                        <Rectangle x:Name="TestTube" 
-                                 Canvas.Left="175" 
-                                 Canvas.Top="100"
-                                 Width="50" 
-                                 Height="200" 
-                                 Fill="Transparent" 
-                                 Stroke="Gray" 
-                                 StrokeThickness="2"/>
-
-                        <!-- Base del tubo -->
-                        <Path x:Name="TestTubeBase"
-                              Canvas.Left="165"
-                              Canvas.Top="300"
-                              Data="M 0,0 C 0,0 35,0 70,0 C 70,20 0,20 0,0"
-                              Fill="Gray"/>
-
-                        <!-- Líquido animado -->
-                        <Rectangle x:Name="Liquid"
-                                 Canvas.Left="177"
-                                 Canvas.Top="250"
-                                 Width="46"
-                                 Height="48"
-                                 Fill="#FFE53935">
-                            <Rectangle.RenderTransform>
-                                <TranslateTransform x:Name="LiquidTransform" Y="0"/>
-                            </Rectangle.RenderTransform>
-                        </Rectangle>
-
-                        <!-- Burbujas -->
-                        <Ellipse x:Name="Bubble1" Width="8" Height="8" Fill="#22FFFFFF" Canvas.Left="190" Canvas.Top="260">
-                            <Ellipse.RenderTransform>
-                                <TranslateTransform x:Name="Bubble1Transform" Y="0"/>
-                            </Ellipse.RenderTransform>
-                        </Ellipse>
-
-                        <Ellipse x:Name="Bubble2" Width="6" Height="6" Fill="#22FFFFFF" Canvas.Left="200" Canvas.Top="270">
-                            <Ellipse.RenderTransform>
-                                <TranslateTransform x:Name="Bubble2Transform" Y="0"/>
-                            </Ellipse.RenderTransform>
-                        </Ellipse>
-                    </Canvas>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height=".02*"/>
+                        <RowDefinition/>
+                        <RowDefinition Height=".02*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".01*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width=".01*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid x:Name="BorderAllowFrame" Grid.Row="1" Grid.Column="1" CornerRadius="10" Background="Transparent">
+                        <!--<Frame x:Name="ContentFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
+                    </Grid>
                 </Grid>
-            </Frame>
-        </NavigationView>
+            </SplitView.Content>
+        </SplitView>
     </Grid>
 </Page>
